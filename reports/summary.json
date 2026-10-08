@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "total_events": 896,
+    "failed_logins": 684,
+    "invalid_user_attempts": 94,
+    "successful_logins": 118,
+    "unique_ips": 48,
+    "top_ips": [
+      [
+        "203.0.113.50",
+        300
+      ],
+      [
+        "192.0.2.77",
+        200
+      ],
+      [
+        "203.0.113.99",
+        40
+      ],
+      [
+        "198.51.100.23",
+        25
+      ],
+      [
+        "198.51.100.77",
+        25
+      ],
+      [
+        "192.0.2.14",
+        18
+      ],
+      [
+        "203.0.113.194",
+        3
+      ],
+      [
+        "203.0.113.180",
+        3
+      ],
+      [
+        "203.0.113.151",
+        3
+      ],
+      [
+        "203.0.113.157",
+        3
+      ]
+    ],
+    "top_users": [
+      [
+        "admin",
+        289
+      ],
+      [
+        "root",
+        255
+      ],
+      [
+        "deploy",
+        42
+      ],
+      [
+        "ubuntu",
+        19
+      ],
+      [
+        "ftp",
+        18
+      ],
+      [
+        "demo",
+        14
+      ],
+      [
+        "dev",
+        12
+      ],
+      [
+        "tomcat",
+        10
+      ],
+      [
+        "backup",
+        10
+      ],
+      [
+        "pi",
+        10
+      ]
+    ],
+    "start": "2026-09-24 03:41:06",
+    "end": "2026-09-30 17:24:59"
+  },
+  "alerts": [
+    {
+      "rule": "brute_force",
+      "severity": "high",
+      "ip": "203.0.113.50",
+      "count": 300,
+      "first_seen": "2026-09-25 03:16:50",
+      "last_seen": "2026-09-25 03:17:50",
+      "users": "admin;root",
+      "description": "34 failed logins within 60s (300 failures in total)"
+    },
+    {
+      "rule": "success_after_failures",
+      "severity": "high",
+      "ip": "203.0.113.99",
+      "count": 41,
+      "first_seen": "2026-09-28 02:40:00",
+      "last_seen": "2026-09-28 02:43:28",
+      "users": "deploy",
+      "description": "Login as 'deploy' succeeded after 40 failures in the previous 10 min"
+    },
+    {
+      "rule": "brute_force",
+      "severity": "high",
+      "ip": "203.0.113.99",
+      "count": 40,
+      "first_seen": "2026-09-28 02:41:30",
+      "last_seen": "2026-09-28 02:42:27",
+      "users": "deploy",
+      "description": "15 failed logins within 60s (40 failures in total)"
+    },
+    {
+      "rule": "brute_force",
+      "severity": "high",
+      "ip": "198.51.100.77",
+      "count": 25,
+      "first_seen": "2026-09-27 20:28:00",
+      "last_seen": "2026-09-27 20:29:00",
+      "users": "admin;root;ubuntu",
+      "description": "18 failed logins within 60s (25 failures in total)"
+    },
+    {
+      "rule": "brute_force",
+      "severity": "high",
+      "ip": "192.0.2.14",
+      "count": 18,
+      "first_seen": "2026-09-27 05:18:00",
+      "last_seen": "2026-09-27 05:18:54",
+      "users": "admin;root;ubuntu",
+      "description": "18 failed logins within 60s (18 failures in total)"
+    },
+    {
+      "rule": "user_enumeration",
+      "severity": "medium",
+      "ip": "198.51.100.23",
+      "count": 50,
+      "first_seen": "2026-09-26 14:05:00",
+      "last_seen": "2026-09-26 14:07:51",
+      "users": "admin;ansible;backup;demo;dev;ftp;git;guest;hadoop;info",
+      "description": "25 distinct usernames within 10 min"
+    },
+    {
+      "rule": "brute_force",
+      "severity": "medium",
+      "ip": "198.51.100.23",
+      "count": 25,
+      "first_seen": "2026-09-26 14:05:30",
+      "last_seen": "2026-09-26 14:06:30",
+      "users": "admin;ansible;backup;demo;dev;ftp;git;guest;hadoop;info",
+      "description": "10 failed logins within 60s (25 failures in total)"
+    }
+  ],
+  "anomalies": [
+    {
+      "ip": "203.0.113.50",
+      "anomaly_score": 0.7251,
+      "total_events": 300,
+      "fail_ratio": 1.0,
+      "distinct_users": 2,
+      "max_per_minute": 32,
+      "duration_hours": 0.17
+    },
+    {
+      "ip": "192.0.2.77",
+      "anomaly_score": 0.694,
+      "total_events": 200,
+      "fail_ratio": 1.0,
+      "distinct_users": 2,
+      "max_per_minute": 1,
+      "duration_hours": 13.39
+    },
+    {
+      "ip": "198.51.100.23",
+      "anomaly_score": 0.6873,
+      "total_events": 50,
+      "fail_ratio": 1.0,
+      "distinct_users": 25,
+      "max_per_minute": 18,
+      "duration_hours": 0.05
+    },
+    {
+      "ip": "203.0.113.99",
+      "anomaly_score": 0.6351,
+      "total_events": 41,
+      "fail_ratio": 0.976,
+      "distinct_users": 1,
+      "max_per_minute": 13,
+      "duration_hours": 0.06
+    }
+  ]
+}

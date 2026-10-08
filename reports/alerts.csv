@@ -1,0 +1,8 @@
+rule,severity,ip,count,first_seen,last_seen,users,description
+brute_force,high,203.0.113.50,300,2026-09-25 03:16:50,2026-09-25 03:17:50,admin;root,34 failed logins within 60s (300 failures in total)
+success_after_failures,high,203.0.113.99,41,2026-09-28 02:40:00,2026-09-28 02:43:28,deploy,Login as 'deploy' succeeded after 40 failures in the previous 10 min
+brute_force,high,203.0.113.99,40,2026-09-28 02:41:30,2026-09-28 02:42:27,deploy,15 failed logins within 60s (40 failures in total)
+brute_force,high,198.51.100.77,25,2026-09-27 20:28:00,2026-09-27 20:29:00,admin;root;ubuntu,18 failed logins within 60s (25 failures in total)
+brute_force,high,192.0.2.14,18,2026-09-27 05:18:00,2026-09-27 05:18:54,admin;root;ubuntu,18 failed logins within 60s (18 failures in total)
+user_enumeration,medium,198.51.100.23,50,2026-09-26 14:05:00,2026-09-26 14:07:51,admin;ansible;backup;demo;dev;ftp;git;guest;hadoop;info,25 distinct usernames within 10 min
+brute_force,medium,198.51.100.23,25,2026-09-26 14:05:30,2026-09-26 14:06:30,admin;ansible;backup;demo;dev;ftp;git;guest;hadoop;info,10 failed logins within 60s (25 failures in total)
